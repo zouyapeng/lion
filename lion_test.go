@@ -8,7 +8,7 @@ import (
 )
 
 func TestLion(t *testing.T) {
-	l, err := lion.Login("http://dev-lion.amh-group.com/lion/open", "<YourAppName>", "<YourPassword>")
+	l, err := lion.Init("http://dev-lion.amh-group.com/lion/open", "<YourAppName>", "<YourPassword>")
 	if err != nil {
 		fmt.Println(err.Error())
 		return

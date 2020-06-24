@@ -133,7 +133,7 @@ func login(l *Lion) (err error) {
 }
 
 // Login 初始化lion结构体，获取token
-func Login(url, username, password string) (l *Lion, err error) {
+func Init(url, username, password string) (l *Lion, err error) {
 	tmpLion := &Lion{
 		url:      url,
 		username: username,
