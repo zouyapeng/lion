@@ -21,14 +21,26 @@ func main() {
 
     // 获取整个项目的所有配置
   	config, err := l.QueryConfigByProject("qa", "phantom-service-rel")
-  	fmt.Println(config)
+    if err != nil {
+    	fmt.Println(err.Error())
+    	return
+    }  	
+    fmt.Println(config)
     
     // 获取用户下 部分项目的部分配置
   	config, err = l.QueryConfigByKey("qa", []string{"phantom-service-rel.database.addr", "phantom-service-rel.database.port"})
+    if err != nil {
+        fmt.Println(err.Error())
+        return
+    }
   	fmt.Println(config)
 
     // 获取用户下 单个配置项
   	config, err = l.QueryConfigByKey("qa", "phantom-service-rel.database.addr")
-  	fmt.Println(config)
+    if err != nil {
+        fmt.Println(err.Error())
+        return
+    }
+    fmt.Println(config)
 }
 ```
