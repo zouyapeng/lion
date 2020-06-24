@@ -47,6 +47,7 @@ func main() {
 
 ## Example(Python)
 > beidou-api/comm/utils.py line 198-269
+
 ```python
 def get_uniform_conf(key, parent='beidou', path=None, filename='cfg.toml', source='local', **kwargs):
     """
