@@ -1,4 +1,4 @@
-module code.amh-group.com/devops/lion
+module github.com/zouyapeng/lion
 
 go 1.14
 
